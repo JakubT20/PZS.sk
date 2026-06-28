@@ -760,6 +760,210 @@ details p {
   font-weight: 900;
 }
 
+.blog-hero {
+  padding: 74px 0 54px;
+  color: var(--white);
+  background: var(--navy);
+}
+
+.blog-hero h1,
+.blog-hero p,
+.blog-hero .eyebrow {
+  color: var(--white);
+}
+
+.blog-hero h1 {
+  max-width: 860px;
+  font-size: 3.55rem;
+}
+
+.blog-hero p {
+  max-width: 720px;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 1.14rem;
+}
+
+.blog-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 28px;
+}
+
+.topic-pill {
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 8px 12px;
+  color: var(--navy);
+  background: var(--white);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 850;
+}
+
+.blog-page-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.blog-list-card {
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.blog-list-card img {
+  width: 100%;
+  height: 220px;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.blog-list-card div {
+  padding: 24px;
+}
+
+.blog-list-card time,
+.article-meta {
+  color: var(--teal-dark);
+  font-size: 0.9rem;
+  font-weight: 850;
+}
+
+.blog-list-card h2 {
+  margin: 10px 0 12px;
+  font-size: 1.35rem;
+}
+
+.blog-list-card p {
+  color: var(--muted);
+}
+
+.blog-list-card a {
+  display: inline-flex;
+  margin-top: 10px;
+  color: var(--teal-dark);
+  font-weight: 900;
+}
+
+.article-hero {
+  padding: 56px 0 46px;
+  background: var(--soft);
+}
+
+.article-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.92fr) minmax(320px, 1fr);
+  align-items: center;
+  gap: 42px;
+}
+
+.article-hero h1 {
+  font-size: 3.2rem;
+}
+
+.article-hero p {
+  color: var(--muted);
+  font-size: 1.12rem;
+}
+
+.article-hero img {
+  width: 100%;
+  height: 360px;
+  aspect-ratio: 16 / 11;
+  object-fit: cover;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.article-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 310px;
+  gap: 48px;
+  align-items: start;
+}
+
+.article-body {
+  max-width: 780px;
+}
+
+.article-body h2 {
+  margin-top: 42px;
+  font-size: 2rem;
+}
+
+.article-body h3 {
+  margin-top: 26px;
+}
+
+.article-body p,
+.article-body li {
+  color: #33495a;
+  font-size: 1.04rem;
+}
+
+.article-body ul,
+.article-body ol {
+  padding-left: 22px;
+}
+
+.article-note,
+.article-cta-box,
+.article-sidebar {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.article-note {
+  padding: 20px;
+  margin: 28px 0;
+  background: var(--sky);
+  color: var(--navy);
+  font-weight: 800;
+}
+
+.article-cta-box {
+  padding: 26px;
+  margin-top: 42px;
+  background: var(--navy);
+}
+
+.article-cta-box h2,
+.article-cta-box p {
+  color: var(--white);
+}
+
+.article-sidebar {
+  position: sticky;
+  top: 96px;
+  padding: 22px;
+  background: var(--white);
+}
+
+.article-sidebar h2 {
+  font-size: 1.12rem;
+}
+
+.article-sidebar a {
+  display: block;
+  padding: 12px 0;
+  color: var(--teal-dark);
+  border-top: 1px solid var(--line);
+  font-weight: 850;
+}
+
+.back-link {
+  display: inline-flex;
+  margin-bottom: 20px;
+  color: var(--teal-dark);
+  font-weight: 900;
+}
+
 .contact {
   padding-top: 0;
 }
@@ -906,16 +1110,23 @@ address a {
 
   .audience-grid,
   .card-grid,
-  .blog-grid {
+  .blog-grid,
+  .blog-page-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .split,
   .trust-grid,
+  .article-hero-grid,
+  .article-layout,
   .offer-grid,
   .contact-panel,
   .footer-grid {
     grid-template-columns: 1fr;
+  }
+
+  .article-sidebar {
+    position: static;
   }
 
   .expert-card {
@@ -991,8 +1202,31 @@ address a {
   .audience-grid,
   .card-grid,
   .blog-grid,
+  .blog-page-grid,
   .steps {
     grid-template-columns: 1fr;
+  }
+
+  .blog-hero h1,
+  .article-hero h1 {
+    font-size: 2.28rem;
+  }
+
+  .blog-hero {
+    padding: 48px 0 38px;
+  }
+
+  .article-hero {
+    padding: 36px 0;
+  }
+
+  .blog-list-card img,
+  .article-hero img {
+    height: 240px;
+  }
+
+  .article-body h2 {
+    font-size: 1.65rem;
   }
 
   .hero-points {
